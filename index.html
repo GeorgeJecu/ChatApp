@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+    <script src="index.js" type="module"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="loader.css" />
+    <link rel="stylesheet" href="font.css" />
+  </head>
+  <body onload="populateEmoji()">
+    <div id="signUpForm">
+      <form onsubmit="event.preventDefault();startChat();">
+        <h1>Get started</h1>
+        <p>Tell us your name!</p>
+        <img src="https://firebasestorage.googleapis.com/v0/b/chat-ab950.appspot.com/o/loginImage.svg?alt=media&token=1117d10f-58e0-48db-9575-316c0bfb5d4a" alt="" />
+        <label>
+          Name:<input type="text" placeholder="John Doe" name="name" />
+        </label>
+        <input type="submit" value="Enter Chat" />
+      </form>
+    </div>
+    <div id="chatContainer" class="hidden">
+      <div id="chat">
+        <!--
+        <div class="chatBubble self">
+          <div class="userName">Bogdan</div>
+          <div class="message">Cursul de frontend e foarte misto</div>
+          <div class="time">19:34</div>
+        </div>
+        <div class="chatBubble self">
+          <div class="userName">Bogdan</div>
+          <div class="message">Cursul de frontend e foarte misto</div>
+          <div class="time">19:34</div>
+        </div>
+        <div class="chatBubble other">
+          <div class="userName">Bogdan</div>
+          <div class="message">Cursul de frontend e foarte misto</div>
+          <div class="time">19:34</div>
+        </div>
+        <div class="chatBubble self">
+          <div class="userName">Bogdan</div>
+          <div class="message">Cursul de frontend e foarte misto</div>
+          <div class="time">19:34</div>
+        </div>
+        <div class="chatBubble other">
+          <div class="userName">John Doe</div>
+          <div class="message">Cursul de frontend e foarte misto</div>
+          <div class="time">19:34</div>
+        </div>
+        -->
+      </div>
+      <div class="emojiContainer hidden">
+        <div class="emoji hidden"></div>
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div id="controls">
+        <form onsubmit="event.preventDefault();addMessage();">
+          <textarea id="chatMessage" name="chatMessage"></textarea>
+          <button
+            type="button"
+            name="emoji"
+            onclick="listEmoji(); emojiLoader()">
+            <img src="https://firebasestorage.googleapis.com/v0/b/chat-ab950.appspot.com/o/emoji.png?alt=media&token=0a1d8a01-5ea1-43f9-bcf7-1508a276d997" alt="" srcset="" />
+          </button>
+          <button type="submit">
+            <img src="https://firebasestorage.googleapis.com/v0/b/chat-ab950.appspot.com/o/sendIcon.png?alt=media&token=6784c9ab-dcfd-4e37-8f4f-287667f6b978" style="width: 40px; height: 40px" />
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- CURS 01:00 -->

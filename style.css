@@ -1,0 +1,184 @@
+:root {
+  /*root inseamna html-ul*/
+  --shadow-rgb: 11, 20, 26;
+} /*Variabila de css!! */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+button{
+  cursor: pointer;
+}
+
+#signUpForm{
+  height: 100vh ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signUpForm > form h1{
+  color: #3f3d56;
+  margin-bottom: 0;
+}
+
+#signUpForm > form p, #signUpForm > form label{
+  color: #3f3d56;
+}
+
+#signUpForm > form label input{
+  height: 4vh;
+  border-radius: 1.5vh;
+  margin-left: 10px;
+}
+
+#signUpForm form{
+  border: 5px solid #e6e6e6;
+  border-radius: 20px;
+  padding: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#signUpForm form img{
+  max-width: 50vh;
+}
+
+#controls form button{
+  border: 2px solid #6c63ff;
+  border-radius: 1.5vh;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#controls form button img{
+  max-width: 5vh;
+}
+
+button[type="button"]{
+  background-color: #3f3d56;
+}
+button[type="submit"]{
+  background-color: #ffffff;
+}
+input[type="submit"]{
+  cursor: pointer;
+}
+
+textarea[name="chatMessage"]{
+  background-color: #ffffff;
+  border: 2px solid #6c63ff;
+  border-radius: 1.5vh;
+}
+
+label, input {
+  margin-top: 2vh;
+}
+
+input[value="Enter Chat"]{
+  background-color: #6c63ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5vh;
+  height: 5vh;
+  width: 30vh;
+  font-size: 2.2vh;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.emojiContainer{
+  border: 2px solid #cbcbcb;
+}
+
+.emoji{
+  background-color: #e6e6e6;
+}
+
+.emoji button{
+  background-color: #ffffff;
+  z-index: 6;
+}
+
+.emoji button img{
+  max-width: 4vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.error {
+  border-color: red;
+}
+
+#chatContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh; /*chat Container este 100% din inaltimea viewport!!!!*/
+  display: flex;
+  flex-direction: column;
+}
+#chat {
+  flex: 1; /*tot restul elementelor se intind cat le permite continutul, dar ce are flex 1 se va intinde cat restul de spatiu ramas*/
+  background-color: #e6e6e6;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/chat-ab950.appspot.com/o/background.svg?alt=media&token=a7db5a0e-e7ff-4cb7-8192-0ecabf672a4e);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /*punem bara de scroll pe chat!!!!!*/
+}
+#controls > form {
+  display: flex;
+  flex-direction: row;
+}
+
+.message img {
+  max-width: 8vh;
+}
+#chatMessage {
+  flex: 1; /*tot restul elementelor se intind cat le permite continutul, dar ce are flex 1 se va intinde cat restul de spatiu ramas*/
+  font-size: 2.1vh;
+}
+.chatBubble {
+  border-radius: 30px;
+  padding: 3px 20px;
+  margin-top: 10px;
+  width: fit-content;
+  max-width: 90%;
+  box-shadow: 0 1px 0.5px rgba(var(--shadow-rgb), 0.13);
+}
+.chatBubble.self {
+  align-self: flex-end;
+  background-color: #6c63ff;
+  color: #ffffff;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.chatBubble.self > .userName {
+  display: none;
+}
+.chatBubble.self + .chatBubble.self {
+  /*selecteaza primul chat bubble self dupa chat bubble self*/
+  margin-top: 0px;
+}
+
+.chatBubble.other {
+  align-self: flex-start;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.chatBubble > .time {
+  float: right; /*!!!!! USE THIS!!!! */
+  font-size: 0.7rem;
+}
+.chatBubble > .userName {
+  font-style: italic;
+  color: #6c63ff;
+  font-size: 0.9rem;
+}
+
+

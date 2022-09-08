@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+#signUpForm > form h1{
+    font-family: 'Rampart One', cursive;
+}
+
+body{
+    font-family: 'Comic Neue', cursive;}
+
+
+
