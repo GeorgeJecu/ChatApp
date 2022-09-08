@@ -100,7 +100,7 @@ function startChat() {
 }
 
 async function addEmoji(idx){
-  let emoji = `<img src="/images/emoji/png/${idx}.png" alt="" srcset="">`
+  let emoji = `<img src="https://firebasestorage.googleapis.com/v0/b/chat-ab950.appspot.com/o/${i}.png?alt=media&token=e90f1734-797f-4929-9dc4-ea8450560bb4" alt="" srcset="">`
 
   await fetch(firebaseConfig.databaseURL + "/emoji/" + ".json",{
     method: "POST",
